@@ -17,8 +17,15 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save() {
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Dev Block – hello from the Change content!' }
-		</p>
+		<>
+			<div { ...useBlockProps.save() }>
+				<p>
+					{ 'Dev Block' }
+				</p>
+				<p >
+					{ 'Dev Block – hello from the Change content!' }
+				</p>
+			</div>
+		</>
 	);
 }
