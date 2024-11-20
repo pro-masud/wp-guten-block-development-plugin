@@ -4,8 +4,7 @@
 	"name": "create-block/dev-block",
 	"version": "0.1.0",
 	"title": "Dev Block MR",
-	"category": "media",
-	"icon": "media-text",
+	"category": "text",
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},
 	"supports": {
