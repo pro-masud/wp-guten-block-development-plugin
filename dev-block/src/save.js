@@ -5,7 +5,6 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { BlockControls, useBlockProps } from '@wordpress/block-editor';
-import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
 
 /**
  * The save function defines the way in which the different attributes should

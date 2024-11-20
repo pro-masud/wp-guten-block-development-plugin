@@ -8,7 +8,8 @@
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
   "supports": {
-    "html": false
+    "html": false,
+    "anchor": true
   },
   "textdomain": "dev-block",
   "editorScript": "file:./index.js",
