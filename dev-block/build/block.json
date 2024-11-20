@@ -11,7 +11,10 @@
     "html": false,
     "anchor": true,
     "align": true,
-    "color": true
+    "color": {
+      "gradients": true,
+      "background": true
+    }
   },
   "textdomain": "dev-block",
   "editorScript": "file:./index.js",
