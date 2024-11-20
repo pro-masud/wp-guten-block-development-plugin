@@ -39,7 +39,22 @@ export default function Edit() {
 						title="Edit"
 						onClick={ () => console.log( alert('hello world')) }
 					/>
+					<ToolbarButton 
+						icon="trash"
+						title="Trash"
+						onClick={ () => console.log( alert('Delete')) }
+					/>
 				</ToolbarGroup>
+				<ToolbarButton 
+					icon="edit"
+					title="Edit"
+					onClick={ () => console.log( alert('hello world')) }
+				/>
+				<ToolbarButton 
+					icon="trash"
+					title="Trash"
+					onClick={ () => console.log( alert('Delete')) }
+				/>
 			</BlockControls>
 			<div { ...useBlockProps() }>
 				<p>lorem</p>
