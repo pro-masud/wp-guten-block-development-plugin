@@ -11,8 +11,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { BlockControls, useBlockProps } from '@wordpress/block-editor';
-import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { BlockControls, InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { ToolbarGroup, ToolbarButton, PanelBody } from '@wordpress/components';
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -56,6 +56,13 @@ export default function Edit() {
 					onClick={ () => console.log( alert('Delete')) }
 				/>
 			</BlockControls>
+			<InspectorControls >
+				<PanelBody
+					title='Block Settings'
+					initialOpen={false}
+					icon='admin-settings'
+				/>
+			</InspectorControls>
 			<div { ...useBlockProps() }>
 				<p>lorem</p>
 				<p>
