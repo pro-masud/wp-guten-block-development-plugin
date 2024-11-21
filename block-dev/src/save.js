@@ -16,11 +16,11 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save({attributes}) {
-	const {name, phone, address} = attributes;
+	const {name, phone, address, nameColor} = attributes;
 
 	return (
 		<div { ...useBlockProps.save() }>
-			<h2>{ name }</h2>
+			<h2 style={{color: nameColor}}>{ name }</h2>
 			<h2>{ phone }</h2>
 			<h2>{ address }</h2>
 		</div>

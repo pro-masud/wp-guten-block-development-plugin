@@ -64,7 +64,7 @@ export default function Edit({attributes, setAttributes}) {
 					]}
 				/>
 			</InspectorControls>
-			<h2>{ name }</h2>
+			<h2 style={{color: nameColor}}>{ name }</h2>
 			<h2>{ phone }</h2>
 			<h2>{ address }</h2>
 		</div>
