@@ -23,6 +23,10 @@
 		"address":{
 			"type":"string",
 			"default":"Mirpur-10, Dhaka"
+		},
+		"nameColor":{
+			"type":"string",
+			"default":"#333"
 		}
 	},
 	"textdomain": "block-dev",

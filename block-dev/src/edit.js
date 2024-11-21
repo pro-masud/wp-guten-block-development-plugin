@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { BlockControls, InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { BlockControls, InspectorControls, PanelColorSettings, useBlockProps } from '@wordpress/block-editor';
 import { ToolbarGroup, ToolbarButton, PanelBody, TextControl, ColorPalette, ToggleControl } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 
@@ -32,7 +32,7 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit({attributes, setAttributes}) {
-	const {name, phone, address} = attributes;
+	const {name, phone, address, nameColor} = attributes;
 	return (
 		<div { ...useBlockProps() }>
 			<InspectorControls>
@@ -53,6 +53,16 @@ export default function Edit({attributes, setAttributes}) {
 						onChange={ ( address ) => setAttributes( { name: address })}
 					/>
 				</PanelBody>
+				<PanelColorSettings 
+					title={ __( 'Card Fields', 'block-dev') }
+					colorSettings={ [
+						{
+							label: __( 'Name Color', 'block-dev'),
+							value: nameColor,
+							onChange: ( value ) => setAttributes({ nameColor: value }),
+						},
+					]}
+				/>
 			</InspectorControls>
 			<h2>{ name }</h2>
 			<h2>{ phone }</h2>
