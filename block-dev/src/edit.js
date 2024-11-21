@@ -31,10 +31,32 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({attributes, setAttributes}) {
+	const {name, phone, address} = attributes;
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Block Dev – hello from the editor!', 'block-dev' ) }
-		</p>
+		<div { ...useBlockProps() }>
+			<InspectorControls>
+				<PanelBody title='Card Details' >
+					<TextControl 
+						label={ __( 'Name', 'block-dev') }
+						value={ name }
+						onChange={ ( value ) => setAttributes( { name: value })}
+					/>
+					<TextControl 
+						label={ __( 'Phone Number', 'block-dev') }
+						value={ phone }
+						onChange={ ( phone ) => setAttributes( { name: phone })}
+					/>
+					<TextControl 
+						label={ __( 'Enter You Address', 'block-dev') }
+						value={ address }
+						onChange={ ( address ) => setAttributes( { name: address })}
+					/>
+				</PanelBody>
+			</InspectorControls>
+			<h2>{ name }</h2>
+			<h2>{ phone }</h2>
+			<h2>{ address }</h2>
+		</div>
 	);
 }

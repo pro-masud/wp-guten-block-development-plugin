@@ -14,15 +14,15 @@
 	"attributes": {
 		"name":{
 			"type":"string",
-			"default":""
+			"default":"hi bro"
 		},
 		"phone":{
 			"type":"string",
-			"default":""
+			"default":"01797562295"
 		},
 		"address":{
 			"type":"string",
-			"default":""
+			"default":"Mirpur-10, Dhaka"
 		}
 	},
 	"textdomain": "block-dev",
