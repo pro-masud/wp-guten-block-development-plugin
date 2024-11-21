@@ -26,5 +26,41 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function create_block_block_dev_block_init() {
 	register_block_type( __DIR__ . '/build' );
+
+	if ( ! function_exists( 'register_block_type' ) ) {
+        return;
+    }
+
+    register_block_type( 'my-custom-blocks/about', array(
+        'editor_script' => 'my-custom-blocks-js',
+        'editor_style'  => 'my-custom-blocks-editor-style',
+        'style'         => 'my-custom-blocks-style',
+    ) );
 }
 add_action( 'init', 'create_block_block_dev_block_init' );
+
+// Enqueue Block Editor Assets
+add_action( 'enqueue_block_editor_assets', 'my_custom_block_enqueue_assets' );
+function my_custom_block_enqueue_assets() {
+    wp_enqueue_script(
+        'my-custom-blocks-js',
+        plugins_url( '/blocks/about/index.js', __FILE__ ),
+        array( 'wp-blocks', 'wp-editor', 'wp-components' ),
+        null,
+        true
+    );
+
+    wp_enqueue_style(
+        'my-custom-blocks-editor-style',
+        plugins_url( '/blocks/about/editor.css', __FILE__ ),
+        array(),
+        null
+    );
+
+    wp_enqueue_style(
+        'my-custom-blocks-style',
+        plugins_url( '/blocks/about/style.css', __FILE__ ),
+        array(),
+        null
+    );
+}
