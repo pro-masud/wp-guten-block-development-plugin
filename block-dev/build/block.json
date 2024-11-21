@@ -11,6 +11,24 @@
   "supports": {
     "html": false
   },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "hi bro"
+    },
+    "phone": {
+      "type": "string",
+      "default": "01797562295"
+    },
+    "address": {
+      "type": "string",
+      "default": "Mirpur-10, Dhaka"
+    },
+    "nameColor": {
+      "type": "string",
+      "default": "#333"
+    }
+  },
   "textdomain": "block-dev",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
