@@ -1,0 +1,14 @@
+{
+    "apiVersion": 2,
+    "name": "my-custom-blocks/about",
+    "title": "About Block",
+    "category": "text",
+    "icon": "smiley",
+    "editorScript": "file:./about.jsx",
+    "editorStyle": "file:./about.css",
+    "style": "file:./styleMain.css",
+    "supports": {
+      "html": true
+    }
+  }
+  
